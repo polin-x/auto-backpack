@@ -8,8 +8,9 @@
 - 使用CMD或终端下载源代码 `git clone https://github.com/polin-x/auto-backpack`
 
 
-``` cd evm-min
-go mod init evm
+```
+cd auto-backpack
+go mod init auto-backpack
 go mod tidy
 
 # 替换key、secret
