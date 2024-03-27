@@ -46,12 +46,12 @@ func main() {
 		fmt.Println("sellPrice", sellPrice)
 
 		go func() {
-			aa := c.OrderExecute(Symbol, "Ask", "Limit", "", quantity, fmt.Sprintf("%.2f", sellPrice))
+			aa := c.OrderExecute(Symbol, "Ask", "Limit", "", quantity, fmt.Sprintf("%.8f", sellPrice))
 			fmt.Println("sell", aa)
 		}()
 
 		go func() {
-			bb := c.OrderExecute(Symbol, "Bid", "Limit", "", quantity, fmt.Sprintf("%.2f", buyPrice))
+			bb := c.OrderExecute(Symbol, "Bid", "Limit", "", quantity, fmt.Sprintf("%.8f", buyPrice))
 			fmt.Println("buy", bb)
 		}()
 
