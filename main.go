@@ -12,14 +12,14 @@ func main() {
 	c := bpx.NewClient("key", "secret")
 
   // 交易对
-	Symbol := "SOL_USDC"
+	Symbol := "WEN_USDC"
 
   // 间隔时间
 	duration := time.NewTicker(time.Millisecond * 1888)
   // 数量
-	quantity := "0.5"
+	quantity := "500000"
   // 几档成交价
-	gear := 0
+	gear := 5
 
 	for range duration.C {
 		c.OrdersCancels(Symbol)
