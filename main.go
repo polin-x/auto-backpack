@@ -24,8 +24,11 @@ func main() {
 	for range duration.C {
 		c.OrdersCancels(Symbol)
 		fmt.Println(time.Hour)
-
 		a := bpx.Depth(Symbol)
+		if a == nil {
+			continue
+		}
+		
 		if len(a.Asks) < 5 || len(a.Bids) < 5 {
 			continue
 		}
